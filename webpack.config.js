@@ -3,7 +3,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
+console.log(`[${process.env.MODE}]`);
 const MODE = process.env.MODE === 'development' ? 'development' : 'production';
 const __dirname = path.resolve(path.dirname(''));
 
