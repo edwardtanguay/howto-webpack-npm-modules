@@ -1,11 +1,15 @@
 import path from 'path';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import dotenv from 'dotenv';
 
+dotenv.config();
+
+const MODE = process.env.MODE === 'development' ? 'development' : 'production';
 const __dirname = path.resolve(path.dirname(''));
 
 const config = {
 	entry: './src/index.js',
-	mode: 'production',
+	mode: MODE,
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist'),
