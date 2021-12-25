@@ -5,7 +5,8 @@ const config = {
 	entry: './src/index.js',
 	output: {
 		filename: 'main.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/'
 	},
 	module: {
 		rules: [
@@ -18,6 +19,11 @@ const config = {
 				]
 			}
 		]
+	},
+	devServer: {
+		static: path.join(__dirname, 'public'),
+		port: 3020,
+		historyApiFallback: true
 	}
 }
 
