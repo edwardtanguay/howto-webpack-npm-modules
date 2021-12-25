@@ -22,7 +22,7 @@ const config = {
 		]
 	},
 	devServer: {
-		static: path.join(__dirname, 'public'),
+		static: path.join(__dirname, 'dist'),
 		port: 3020,
 		historyApiFallback: true
 	}
