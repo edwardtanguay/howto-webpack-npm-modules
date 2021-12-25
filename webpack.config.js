@@ -1,4 +1,6 @@
 import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+
 const __dirname = path.resolve(path.dirname(''));
 
 const config = {
@@ -25,7 +27,14 @@ const config = {
 		static: path.join(__dirname, 'dist'),
 		port: 3020,
 		historyApiFallback: true
-	}
+	},
+	plugins: [
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: 'src/html', to: '.' }
+			]
+		})
+	]
 }
 
 export default config;
