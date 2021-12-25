@@ -5,7 +5,7 @@ const __dirname = path.resolve(path.dirname(''));
 
 const config = {
 	entry: './src/index.js',
-	mode: 'development',
+	mode: 'production',
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist'),
